@@ -1,0 +1,13 @@
+diff --git a/node_modules/ssb-db/minimal.js b/node_modules/ssb-db/minimal.js
+index ac6384e..d25728e 100644
+--- a/node_modules/ssb-db/minimal.js
++++ b/node_modules/ssb-db/minimal.js
+@@ -17,7 +17,7 @@ module.exports = function (dirname, keys, opts) {
+   var boxers = []
+   var unboxers = []
+ 
+-  var log = OffsetLog(path.join(dirname, 'log.offset'), { blockSize: 1024 * 16, codec })
++  var log = OffsetLog(path.join(dirname, 'log.offset'), { blockSize: 1024 * 16, codec, offsetCodec: 53 })
+ 
+   const unboxerMap = wait((msg, cb) => {
+     try {

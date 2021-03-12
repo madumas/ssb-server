@@ -1,0 +1,114 @@
+diff --git a/node_modules/ssb-db/.github/stale.yml b/node_modules/ssb-db/.github/stale.yml
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/.travis.yml b/node_modules/ssb-db/.travis.yml
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/LICENSE b/node_modules/ssb-db/LICENSE
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/README.md b/node_modules/ssb-db/README.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/api.md b/node_modules/ssb-db/api.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/codec.js b/node_modules/ssb-db/codec.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/create.js b/node_modules/ssb-db/create.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/db.js b/node_modules/ssb-db/db.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/extras.js b/node_modules/ssb-db/extras.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/help.js b/node_modules/ssb-db/help.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/index.js b/node_modules/ssb-db/index.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/indexes/clock.js b/node_modules/ssb-db/indexes/clock.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/indexes/feed.js b/node_modules/ssb-db/indexes/feed.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/indexes/last.js b/node_modules/ssb-db/indexes/last.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/indexes/links.js b/node_modules/ssb-db/indexes/links.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/lib/validators.js b/node_modules/ssb-db/lib/validators.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/minimal.js b/node_modules/ssb-db/minimal.js
+old mode 100644
+new mode 100755
+index 052aefe..50109cf
+--- a/node_modules/ssb-db/minimal.js
++++ b/node_modules/ssb-db/minimal.js
+@@ -80,7 +80,7 @@ module.exports = function (dirname, keys, opts) {
+ 
+   var unboxers = [ mainUnboxer ]
+ 
+-  var log = OffsetLog(path.join(dirname, 'log.offset'), { blockSize: 1024 * 16, codec })
++  var log = OffsetLog(path.join(dirname, 'log.offset'), { blockSize: 1024 * 16, codec, offsetCode: 53 })
+ 
+   const unboxerMap = (msg, cb) => cb(null, db.unbox(msg))
+   const maps = [ unboxerMap ]
+diff --git a/node_modules/ssb-db/test/add.js b/node_modules/ssb-db/test/add.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/append.js b/node_modules/ssb-db/test/append.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/browser/index.html b/node_modules/ssb-db/test/browser/index.html
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/close.js b/node_modules/ssb-db/test/close.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/end-to-end.js b/node_modules/ssb-db/test/end-to-end.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/feed.js b/node_modules/ssb-db/test/feed.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/history.js b/node_modules/ssb-db/test/history.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/latest.js b/node_modules/ssb-db/test/latest.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/links.js b/node_modules/ssb-db/test/links.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/linktypes.js b/node_modules/ssb-db/test/linktypes.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/log.js b/node_modules/ssb-db/test/log.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/mesages-by-type.js b/node_modules/ssb-db/test/mesages-by-type.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/msg-encoding.js b/node_modules/ssb-db/test/msg-encoding.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/util.js b/node_modules/ssb-db/test/util.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/validation.js b/node_modules/ssb-db/test/validation.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/test/write-stream.js b/node_modules/ssb-db/test/write-stream.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/ssb-db/util.js b/node_modules/ssb-db/util.js
+old mode 100644
+new mode 100755

@@ -17,6 +17,7 @@
     "test": "set -e; for t in test/*.js; do echo TEST $t; node $t; done && compatibility",
     "reinstall": "rm -rf node_modules package-lock.json npm-shrinkwrap.json; export npm_config_package_lock=true; npm install && npm dedupe && npm shrinkwrap",
     "coverage": "nyc --reporter=lcov npm test"
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "bash-color": "~0.0.3",
@@ -38,6 +39,7 @@
     "muxrpcli": "3",
     "mv": "^2.1.1",
     "osenv": "^0.1.5",
+    "patch-package": "^6.2.2",
     "pull-cat": "~1.1.5",
     "pull-file": "^1.0.0",
     "pull-many": "~1.0.6",
